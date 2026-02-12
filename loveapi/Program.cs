@@ -39,6 +39,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGet("/", () => "Love API running ❤️");
+
+
 app.MapPost("/api/love", async (LoveContext db, Couple couple) =>
 {
     db.Couples.Add(couple);
