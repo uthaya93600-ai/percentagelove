@@ -5,7 +5,8 @@ using LoveApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<LoveContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+  options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // ✅ Add CORS only once
 builder.Services.AddCors(options =>
