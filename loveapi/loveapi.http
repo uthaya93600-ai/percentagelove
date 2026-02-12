@@ -1,0 +1,6 @@
+@loveapi_HostAddress = http://localhost:5174
+
+GET {{loveapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
